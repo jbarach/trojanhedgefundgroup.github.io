@@ -1825,7 +1825,7 @@
 		}
 
 	h1 {
-		font-size: 80pt;
+		font-size: 100pt;
 		line-height: 1.2;
 		margin-top: -.93em;
 		text-align: center;
@@ -1837,6 +1837,8 @@
 
 		
 	}
+
+
 
 	h2 {
 		font-size: 1.5em;
@@ -1854,7 +1856,7 @@
 		font-size: 0.9em;
 	}
 
-h6 {
+	h6 {
 		font-size: 3em;
 
 		color: #CCCCCC;
@@ -1938,6 +1940,58 @@ h6 {
 		position: relative;
 	}
 
+	.wrapper.fade-up > .inner {
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+			-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+			-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+			-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+			transition: opacity 1s ease, transform 1s ease;
+			opacity: 1.0;
+		}
+
+		.wrapper.fade-up.inactive > .inner, body.is-loading .wrapper.fade-up > .inner {
+			opacity: 0;
+			-moz-transform: translateY(1em);
+			-webkit-transform: translateY(1em);
+			-ms-transform: translateY(1em);
+			transform: translateY(1em);
+		}
+
+		.wrapper.fade-down > .inner {
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+			-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+			-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+			-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+			transition: opacity 1s ease, transform 1s ease;
+			opacity: 1.0;
+		}
+
+		.wrapper.fade-down.inactive > .inner, body.is-loading .wrapper.fade-down > .inner {
+			opacity: 0;
+			-moz-transform: translateY(-1em);
+			-webkit-transform: translateY(-1em);
+			-ms-transform: translateY(-1em);
+			transform: translateY(-1em);
+		}
+
+		.wrapper.fade > .inner {
+			-moz-transition: opacity 1s ease;
+			-webkit-transition: opacity 1s ease;
+			-ms-transition: opacity 1s ease;
+			transition: opacity 1s ease;
+			opacity: 1.0;
+		}
+
+		.wrapper.fade.inactive > .inner, body.is-loading .wrapper.fade > .inner {
+			opacity: 0;
+		}
+
 		.wrapper .title {
 			position: absolute;
 			top: 0;
@@ -1993,6 +2047,17 @@ h6 {
 
 		}
 
+		.wrapper.style5 {
+			background: #3c3a47;
+
+		}
+
+
+		.wrapper.style5 .title {
+				background: #3c3a47;
+				color: #fff;
+			}
+
 			.wrapper.style2 .title {
 				background: #CCCCCC;
 				color: #484d55;
@@ -2000,6 +2065,7 @@ h6 {
 
 		.wrapper.style3 {
 			background: #3f0000 url("images/overlay.png");
+
 		}
 
 			.wrapper.style3 .title {
@@ -2015,6 +2081,100 @@ h6 {
 		background: url("../../images/bg-body.jpg") center center;
 		background-size: cover;
 	}
+
+	#activities-wrapper {
+		background: #3c3a47 ;
+
+	}
+
+
+	.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+		.icon.major {
+			width: 2.5em;
+			height: 2.5em;
+			display: block;
+			background: #ffffff;
+			border-radius: 100%;
+			color: #312450;
+			text-align: center;
+			line-height: 2.5em;
+			margin: 0 0 1.3em 0;
+		}
+
+			.icon.major:before {
+				font-size: 1.25em;
+			}
+
+				.wrapper.style1 .icon.major:before {
+					color: #5e42a6;
+				}
+
+				.wrapper.style1-alt .icon.major:before {
+					color: #493382;
+				}
+
+				.wrapper.style2 .icon.major:before {
+					color: #5052b5;
+				}
+
+				.wrapper.style2-alt .icon.major:before {
+					color: #3e4094;
+				}
+
+				.wrapper.style3 .icon.major:before {
+					color: #b74e91;
+				}
+
+				.wrapper.style3-alt .icon.major:before {
+					color: #953d75;
+				}
+
+
+				.wrapper {
+		position: relative;
+	}
+
+		.wrapper > .inner {
+			padding: 5em 5em 3em 5em ;
+			max-width: 100%;
+			width: 75em;
+		}
+
+			@media screen and (max-width: 1680px) {
+
+				.wrapper > .inner {
+					padding: 4em 4em 2em 4em ;
+				}
+
+			}
+
+			@media screen and (max-width: 1280px) {
+
+				.wrapper > .inner {
+					width: 100%;
+				}
+
+			}
+
+			@media screen and (max-width: 736px) {
+
+				.wrapper > .inner {
+					padding: 3em 2em 1em 2em ;
+				}
+
+			}
 
 		#header-wrapper:before {
 			content: '';
@@ -2677,7 +2837,6 @@ h6 {
 				}
 
 		}
-
 		/* Highlights */
 
 			#highlights .highlight h3 {
@@ -3119,6 +3278,8 @@ h6 {
 					border-top-color: #eee;
 					border-top-color: rgba(255, 255, 255, 0.05);
 				}
+
+
 
 		/* Logo */
 
